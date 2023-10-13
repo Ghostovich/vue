@@ -39,11 +39,8 @@
             return this.buttonReverseText;
           },
           addLi() {
-            this.arr.push(`<li><a @click="deleteLi">${this.addLiText}</a></li>`);
+            this.arr.push(`<li v>${this.addLiText}</li>`);
           },
-          deleteLi(){
-            this.arr.delete();
-          }
         },
       };
 
