@@ -41,8 +41,7 @@
             this.products.sort((a, b) => (a.price > b.price ? 1 : -1));
           },
           SortMax() {
-            this.products.sort((a, b) => (a.price > b.price ? 1 : -1));
-            this.products.reverse();
+            this.products.sort((a, b) => (a.price < b.price ? 1 : -1));
           },
         },
       };
