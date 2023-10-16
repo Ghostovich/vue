@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+
+    <div id="app">
+      <p>Сортировка:</p>
+      <button @click="SortMin">Сначала недорогие</button>
+      <button @click="SortMax">Сначала дорогие</button>
+
+      <ul>
+        <li v-for="product in products" :key="products.id">
+          {{product.name}}:{{product.price}}
+        </li>
+      </ul>
+      <p></p>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const app = {
+        data() {
+          return {
+            products: [
+              { id: 1, name: "Молоко", price: 70 },
+              { id: 2, name: "Хлеб", price: 30 },
+              { id: 3, name: "Сахар", price: 50 },
+              { id: 4, name: "Соль", price: 40 },
+              { id: 5, name: "Мука", price: 60 },
+            ],
+          };
+        },
+        methods: {
+          SortMin() {
+            this.products.sort((a, b) => (a.price > b.price ? 1 : -1));
+          },
+          SortMax() {
+            this.products.sort((a, b) => (a.price > b.price ? 1 : -1));
+            this.products.reverse();
+          },
+        },
+      };
+
+      Vue.createApp(app).mount("#app");
+    </script>
+  </body>
+</html>
