@@ -1,0 +1,26 @@
+.header {
+  @extend %siteFlex;
+  justify-content: space-between;
+  margin-top: 53px;
+  margin-bottom: 53px;
+  &__logo {
+    @extend %siteFlex;
+    gap: 10px;
+    font-size: 40px;
+    transition: 0.3s;
+      &:hover{
+        opacity: 0.7;
+      }
+  }
+  &__nav__menu {
+    @extend %siteFlex;
+    gap: 50px;
+    @extend %otherSiteFont;
+    &__link{
+      transition: 0.3s;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}

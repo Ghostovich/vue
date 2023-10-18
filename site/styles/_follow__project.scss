@@ -1,0 +1,69 @@
+.follow__project {
+  @extend %siteFlex;
+  flex-direction: column;
+  &__heading {
+    font-size: 50px;
+    line-height: 100%;
+    padding-top: 70px;
+    padding-bottom: 8px;
+  }
+  &__text {
+    padding-bottom: 93px;
+    font-size: 22px;
+    @extend %otherSiteFont;
+    width: 737px;
+    text-align: center;
+  }
+  &__blocks {
+    display: grid;
+    grid-template-columns: 525px 525px;
+    gap: 104px;
+  }
+  &__block {
+    @extend %siteFlex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.3s;
+    &:hover {
+      background: #f4f0ec;
+    }
+    & circle{
+      transition: 0.3s;
+    }
+    &:hover circle {
+      fill: white;
+    }
+    &__img {
+      width: 525px;
+      &__right__up {
+        border-top-right-radius: 60px;
+      }
+      &__left__up {
+        border-top-left-radius: 60px;
+      }
+      &__right__down {
+        border-bottom-right-radius: 60px;
+      }
+      &__left__down {
+        border-bottom-left-radius: 60px;
+      }
+    }
+    &__info {
+      @extend %siteFlex;
+      width: 525px;
+      justify-content: space-between;
+      padding-top: 24px;
+    }
+    &__heading {
+      font-size: 25px;
+      line-height: 100%;
+      transition: 0.3s;
+    }
+    &__discription {
+      @extend %otherSiteFont;
+      font-size: 22px;
+      line-height: 150%;
+      transition: 0.3s;
+    }
+  }
+}

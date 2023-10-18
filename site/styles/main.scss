@@ -1,4 +1,4 @@
-@import "vars", "mixins";
+@import "vars", "mixins", "header", "start", "follow__project","statistic";
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@
 }
 
 .body {
-  @extend %siteFont;
+  @extend %mainSiteFont;
   overflow: hidden;
-  color:  $colorSite;
+  color:  $colorSiteText;
 }

@@ -1,0 +1,24 @@
+.statistic {
+  @extend %siteFlex;
+  background: #f4f0ec;
+  margin-top: 96px;
+  &__blocks {
+    padding-top: 151px;
+    padding-bottom: 151px;
+    width: 100%;
+    @extend %siteFlex;
+  }
+  &__block {
+    padding-right: 54px;
+    padding-left: 76px;
+    @extend %siteFlex;
+    flex-direction: column;
+    font-size: 22px;
+    @extend %otherSiteFont;
+    &__span {
+      @extend %mainSiteFont;
+      color: #cda274;
+      font-size: 85px;
+    }
+  }
+}
