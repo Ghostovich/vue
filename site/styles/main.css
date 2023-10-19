@@ -2,17 +2,16 @@
   font-family: "DM Serif Display", serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
 }
 
-.footer__block__discription, .articles__block__date, .articles__block__design, .articles__description, .statistic__block, .follow__project__block__discription, .follow__project__text, .start__button, .start__text, .header__nav__menu {
+.footer__block__discription, .articles__buttons, .articles__block__date, .articles__block__design, .articles__description, .articles__post__info__date, .articles__post__info__text, .articles__head__discription, .statistic__block, .follow__project__block__discription, .follow__project__text, .start__button, .start__text, .header__nav__menu {
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
 
-.footer__block__logos, .footer__block, .footer, .articles__block__date, .articles__block__design, .articles__block, .articles, .statistic__block, .statistic__blocks, .statistic, .follow__project__block__info, .follow__project__block, .follow__project, .start__button, .start__content, .start, .header__nav__menu, .header__logo, .header {
+.footer__block__logos, .footer__block, .footer, .articles__buttons, .articles__block__date, .articles__block__design, .articles__block, .articles, .articles__post__info__date, .articles__post__info, .statistic__block, .statistic__blocks, .statistic, .follow__project__block__info, .follow__project__block, .follow__project, .start__button, .start__content, .start, .header__nav__menu, .header__logo, .header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -173,6 +172,81 @@
   border-left: 1px solid #cda274;
 }
 
+.articles__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: url(/site/images/articlesHead.png) no-repeat;
+  height: 356px;
+  background-position: center;
+  background-size: cover;
+}
+.articles__head__block {
+  display: flex;
+  width: 503px;
+  padding: 41px 78px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 37px 37px 0px 0px;
+  background: #fff;
+}
+.articles__head__heading {
+  font-size: 50px;
+  line-height: 120%;
+}
+.articles__head__discription {
+  font-size: 22px;
+}
+
+.articles__post {
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+.articles__post__heading {
+  font-size: 50px;
+  padding-bottom: 27px;
+}
+.articles__post__block {
+  border-radius: 62px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  padding: 22px;
+}
+.articles__post__block:hover {
+  background: #f4f0ec;
+}
+.articles__post__block circle {
+  transition: 0.3s;
+}
+.articles__post__block:hover circle {
+  fill: white;
+}
+.articles__post__img {
+  border-radius: 50px;
+  background: #c4c4c4;
+}
+.articles__post__info {
+  width: 463px;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
+}
+.articles__post__info__heading {
+  font-size: 25px;
+}
+.articles__post__info__text {
+  font-size: 22px;
+}
+.articles__post__info__date {
+  padding-top: 20px;
+  font-size: 16px;
+  gap: 240px;
+}
+
 .articles {
   flex-direction: column;
   padding-top: 96px;
@@ -242,6 +316,30 @@
   font-size: 16px;
   gap: 140px;
 }
+.articles__buttons {
+  padding-top: 51px;
+  padding-bottom: 100px;
+  font-size: 16px;
+  gap: 20px;
+}
+.articles__buttons svg {
+  transition: 0.3s;
+}
+.articles__buttons svg:hover {
+  fill: #f4f0ec;
+}
+
+.articles__page {
+  padding-top: 0;
+  align-items: flex-start;
+}
+.articles__page__heading {
+  padding-bottom: 30px;
+  display: flex;
+}
+.articles__page__description {
+  display: none;
+}
 
 .footer {
   padding-bottom: 134px;
@@ -256,6 +354,12 @@
 }
 .footer__block__logos {
   gap: 54px;
+}
+.footer__block__logos svg {
+  transition: 0.3s;
+}
+.footer__block__logos svg:hover path {
+  opacity: 0.7;
 }
 .footer__block__heading {
   font-size: 25px;
