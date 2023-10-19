@@ -1,0 +1,76 @@
+.articles {
+  @extend %siteFlex;
+  flex-direction: column;
+  padding-top: 96px;
+  &__heading {
+    font-size: 50px;
+    padding-bottom: 12px;
+    line-height: 120%;
+  }
+  &__description {
+    @extend %otherSiteFont;
+    font-size: 22px;
+    padding-bottom: 52px;
+    width: 811px;
+    text-align: center;
+  }
+  &__blocks {
+    display: grid;
+    grid-template-columns: 382px 382px 382px;
+    gap: 27px;
+  }
+  &__block {
+    padding: 21px;
+    @extend %siteFlex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 62px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    transition: 0.3s;
+    position: relative;
+    &:hover {
+      background: #f4f0ec;
+    }
+    & circle {
+      transition: 0.3s;
+    }
+    &:hover circle {
+      fill: white;
+    }
+    &__img {
+      width: 340px;
+      border-top-left-radius: 45px;
+      border-top-right-radius: 45px;
+      border: 1px solid #e7e7e7;
+      box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    }
+    &__design {
+      font-size: 16px;
+      @extend %otherSiteFont;
+      z-index: 2;
+      top: 20px;
+      position: absolute;
+      border-radius: 8px 8px 8px 0px;
+      background: #fff;
+      width: 124px;
+      height: 41px;
+      margin-left: 20px;
+      margin-top: 228px;
+      @extend %siteFlex;
+    }
+    &__heading {
+      padding-top: 21px;
+      font-size: 25px;
+      width: 305px;
+      line-height: 120%;
+    }
+    &__date {
+      padding-top: 30px;
+      @extend %siteFlex;
+      font-size: 16px;
+      @extend %otherSiteFont;
+      gap: 140px;
+    }
+  }
+}

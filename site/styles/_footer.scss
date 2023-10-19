@@ -1,0 +1,35 @@
+.footer {
+  @extend %siteFlex;
+  padding-bottom: 134px;
+  padding-top: 96px;
+  gap: 101px;
+  align-items: baseline;
+  &__block {
+    @extend %siteFlex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    &__logos {
+      @extend %siteFlex;
+      gap: 54px;
+    }
+    &__heading {
+      font-size: 25px;
+      @extend %mainSiteFont;
+      &__hover {
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    &__discription {
+      @extend %otherSiteFont;
+      font-size: 22px;
+    }
+  }
+}
+
+.additionallyPadding {
+  padding-right: 274px;
+}

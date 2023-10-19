@@ -8,7 +8,7 @@
     padding-bottom: 8px;
   }
   &__text {
-    padding-bottom: 93px;
+    padding-bottom: 143px;
     font-size: 22px;
     @extend %otherSiteFont;
     width: 737px;
@@ -16,8 +16,10 @@
   }
   &__blocks {
     display: grid;
-    grid-template-columns: 525px 525px;
-    gap: 104px;
+    grid-template-columns: 548px 548px;
+    gap: 100px;
+    margin-top: -50px
+    
   }
   &__block {
     @extend %siteFlex;
@@ -34,7 +36,7 @@
       fill: white;
     }
     &__img {
-      width: 525px;
+      width: 548px;
       &__right__up {
         border-top-right-radius: 60px;
       }
