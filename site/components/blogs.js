@@ -1,7 +1,7 @@
 const blogs = {
   data() {
     return {
-      details: [
+      detailsOld: [
         {
           tag: "Kitchen",
           img: '<img src="/site/images/articles (1).png" alt="img" class= "blog__article__img"/>',
@@ -87,24 +87,42 @@ const blogs = {
           date: "25 December,2022"
         },
       ],
+      details:[]
     };
   },
   methods: {
     conclusionDetails(tag) {
-          this.details = this.details.filter(el => el.tag === tag);
+      this.details = this.detailsOld;
+      this.details = this.details.filter(el => el.tag === tag);
     }
   },
-  template: `<div v-for="detail in details" :key="details.tag">
-  <h1 class="blog__article__heading">
-  {{detail.h3}}
-</h1>
-<div v-html="detail.img"></div>
-<div class="blog__article__img__sub">
-  <p>{{detail.date}}</p>
-  <p>Interior / Home / Decore</p>
-</div>
-<div class="blog__article__discription">
-  {{detail.p}}
-  </div>
-  </div>`
+  template: `
+            <div class="blog__article">
+              <div v-for="detail in details" :key="details.tag">
+                <h1 class="blog__article__heading">{{detail.h3}}</h1>
+                <div v-html="detail.img"></div>
+                <div class="blog__article__img__sub">
+                  <p>{{detail.date}}</p>
+                  <p>Interior / Home / Decore</p>
+                </div>
+                <div class="blog__article__discription">{{detail.p}}</div>
+              </div>
+              <div class="blog__article__separate">
+                <p class="blog__article__separate__span">“</p>
+                <p class="blog__article__separate__main">
+                  The details are not the details. They make the design.
+                </p>
+              </div>
+            </div>
+            <div class="blog__tags">
+                <h3 class="blog__tags__heading">Tags</h3>
+                <div class="blog__tags__block">
+                  <p class='blog__tag' @click='conclusionDetails("Kitchen")'>Kitchen</p>
+                  <p class='blog__tag' @click='conclusionDetails("Bedroom")'>Bedroom</p>
+                  <p class='blog__tag' @click='conclusionDetails("Building")'>Building</p>
+                  <p class='blog__tag' @click='conclusionDetails("Architecture")'>Architecture</p>
+                  <p class='blog__tag' @click='conclusionDetails("Kitchen Planning")'>Kitchen Planning</p>
+                  <p class='blog__tag' @click='conclusionDetails("Bedroom")'>Bedroom</p>
+                </div>
+            </div>`
 }

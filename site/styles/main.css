@@ -473,6 +473,7 @@
 .blog__tag:hover {
   background: #292f36;
   color: white;
+  cursor: pointer;
 }
 
 * {
