@@ -89,33 +89,35 @@
           </p>
           <div class="articles__blocks" id="app">
             <div
-  class="articles__block"
-  v-for="article in articles"
-  :key="articles.id"
->
-  <div  v-html="article.img"></div>
-  <p class="articles__block__design" v-html="article.p"></p>
-  <h3 class="articles__block__heading" v-html="article.h3"></h3>
-  <div class="articles__block__date">
-    <p v-html="article.date"></p>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="52"
-      height="53"
-      viewBox="0 0 52 53"
-      fill="none"
-    >
-      <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-      <path
-        d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-        stroke="#292F36"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
+              class="articles__block"
+              v-for="article in articles"
+              :key="articles.id"
+            >
+            <div>
+              <!-- <div  v-html="article.img"> -->
+                <img src='' alt="img" class= "articles__block__img"/></div>
+              <p class="articles__block__design" v-html="article.p"></p>
+              <h3 class="articles__block__heading" v-html="article.h3"></h3>
+              <div class="articles__block__date">
+                <p v-html="article.date"></p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="53"
+                  viewBox="0 0 52 53"
+                  fill="none"
+                >
+                  <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                  <path
+                    d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
+                    stroke="#292F36"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </section>
         <section class="articles__buttons center body">
@@ -250,7 +252,8 @@
       articles: [
         {
           id: 1,
-          img: '<img src="@/assets/images/articles (1).png" alt="img" class= "articles__block__img"/>',
+          img: require('@/assets/images/articles (1).png'),
+          // img: '<img src="@/assets/images/articles (1).png" alt="img" class= "articles__block__img"/>',
           p: "Kitchan Design",
           h3: "Let’s Get Solution For Building Construction Work",
           date: "26 December,2022"
