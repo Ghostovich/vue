@@ -88,7 +88,6 @@
             points of using.
           </p>
           <div class="articles__blocks" id="app">
-            <!-- <articles></articles> -->
             <div
   class="articles__block"
   v-for="article in articles"
