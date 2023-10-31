@@ -30,6 +30,7 @@
   &__blocks {
     @extend %siteFlex;
     flex-direction: column;
+   
   }
   &__tags {
     @extend %siteFlex;
@@ -58,17 +59,44 @@
   &__block {
     @extend %siteFlex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 30px;
-    &__text{
-      @extend %siteFlex;
-      & svg{
-        &:hover{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+
+    &__alone {
+      transition: 0.3s;
+      width: calc(50% - 15px);
+      height: auto;
+      overflow: visible;
+      position: relative;
+      &:hover {
+        & circle {
           fill: white;
+          cursor: pointer;
         }
+        background: #f4f0ec;
+        cursor: pointer;
       }
-      &:hover{
-        background: #F4F0EC;
+    }
+    &__full__img{
+      position: relative;
+    }
+    &__img{
+      width: 100%;
+      height: auto;
+      position: relative;
+
+      &__star{
+        position: absolute;
+        top: 0;
+        right: 0;
       }
+    }
+    &__text {
+      @extend %siteFlex;
+      justify-content: space-between;
     }
     &__heading {
       font-size: 25px;
@@ -77,7 +105,7 @@
     }
     &__discription {
       color: #4d5053;
-     @extend %otherSiteFont;
+      @extend %otherSiteFont;
       line-height: 150%;
     }
   }
