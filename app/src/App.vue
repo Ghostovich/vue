@@ -4,6 +4,7 @@
   <ArticlesComponent/>
   <BlogDetailsComponent/>
   <ProjectComponent />
+  <ProjectDetails/>
   <FooterComponent />
 </template>
 
@@ -15,8 +16,9 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import ProjectComponent from './components/ProjectComponent.vue'
 
 import FooterComponent from './components/FooterComponent.vue';
+import ProjectDetails from './components/ProjectDetails.vue';
 export default {
-    components: { IndexComponent, ArticlesComponent, BlogDetailsComponent, HeaderComponent, FooterComponent, ProjectComponent }
+    components: { IndexComponent, ArticlesComponent, BlogDetailsComponent, HeaderComponent, FooterComponent, ProjectComponent, ProjectDetails }
 }
 </script>
 
