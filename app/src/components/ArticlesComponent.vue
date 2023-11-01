@@ -70,8 +70,7 @@
               :key="articles.id"
             >
             <div>
-              <!-- <div  v-html="article.img"> -->
-                <img src='' alt="img" class= "articles__block__img"/></div>
+                <img :src='article.img' alt="img" class= "articles__block__img"/></div>
               <p class="articles__block__design" v-html="article.p"></p>
               <h3 class="articles__block__heading" v-html="article.h3"></h3>
               <div class="articles__block__date">
@@ -163,7 +162,7 @@
         },
         {
           id: 2,
-          img: '<img src="@/assets/images/articles (2).png" alt="img"class="articles__block__img"/>',
+          img: require("@/assets/images/articles (2).png"),
 
           p: "Living Design",
           h3: "Low Cost Latest Invented Interior Designing <br />Ideas.",
@@ -171,21 +170,21 @@
         },
         {
           id: 3,
-          img: "<img src='@/assets/images/articles (3).png' alt='img' class='articles__block__img'/>",
+          img: require("@/assets/images/articles (3).png"),
           p: "Interior Design",
           h3: "Best For Any Office & Business Interior <br />Solution",
           date: "25 December,2022"
         },
         {
           id: 4,
-          img: '<img src="@/assets/images/articles (4).png" alt="img" class= "articles__block__img"/>',
+          img: require("@/assets/images/articles (4).png"),
           p: "Kitchan Design",
           h3: "Let’s Get Solution For Building Construction Work",
           date: "26 December,2022"
         },
         {
           id: 5,
-          img: '<img src="@/assets/images/articles (5).png" alt="img"class="articles__block__img"/>',
+          img: require("@/assets/images/articles (5).png"),
 
           p: "Living Design",
           h3: "Low Cost Latest Invented Interior Designing <br />Ideas.",
@@ -193,7 +192,7 @@
         },
         {
           id: 6,
-          img: "<img src='@/assets/images/articles (6).png' alt='img' class='articles__block__img'/>",
+          img: require("@/assets/images/articles (6).png"),
           p: "Interior Design",
           h3: "Best For Any Office & Business Interior <br />Solution",
           date: "25 December,2022"
