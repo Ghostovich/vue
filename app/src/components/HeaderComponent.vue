@@ -1,7 +1,7 @@
 <template>
  <header>
       <div class="header center body">
-        <a href="/site/index.html" class="header__logo">
+        <router-link to='/' class="header__logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="34"
@@ -15,11 +15,11 @@
             />
           </svg>
           <p class="header__logo__text">Interno</p>
-        </a>
+        </router-link>
         <div class="header__nav__menu">
-          <a href="#" class="header__nav__menu__link">Home</a>
-          <a href="#" class="header__nav__menu__link">Project</a>
-          <a href="#" class="header__nav__menu__link">Blog</a>
+          <router-link to='/' class="header__nav__menu__link">Home</router-link>
+          <router-link to='/Project' class="header__nav__menu__link">Project</router-link>
+          <router-link to='/Articles' class="header__nav__menu__link">Blog</router-link>
         </div>
       </div>
     </header>
