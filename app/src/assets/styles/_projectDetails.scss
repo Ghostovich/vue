@@ -5,6 +5,7 @@
     background-position: center;
     background-size: cover;
     margin-bottom: 200px;
+    position: relative;
   }
   &__content{
     display: flex;
@@ -26,4 +27,17 @@
     width: 658px;
     padding-bottom: 100px;
   }
+  &__slider{
+    position: absolute;
+  }
+  
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: hidden;
 }
