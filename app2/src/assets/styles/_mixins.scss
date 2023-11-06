@@ -1,0 +1,26 @@
+@mixin container {
+  padding-left: calc(50% - $widthSite / 2);
+  padding-right: calc(50% - $widthSite / 2);
+}
+
+%mainSiteFont {
+  font-family: 'DM Serif Display', serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%otherSiteFont {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+%siteFlex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center 
+}

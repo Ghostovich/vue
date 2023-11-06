@@ -1,0 +1,22 @@
+.notFound {
+  @extend %siteFlex;
+  &__text {
+    &__heading {
+      color: #cda274;
+      font-size: 250px;
+      font-weight: 400;
+      line-height: 125%;
+    }
+    &__text {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+  &__img img {
+    border-radius: 0px 0px 0px 353px;
+    background: #ebebeb;
+    // width: 913px;
+    height: 1042px;
+  }
+}

@@ -1,0 +1,11 @@
+$colorSiteText: #292F36;
+$colorLabel: #CDA274;
+$widthSite: 1200px;
+
+@media(max-width:1024px){
+  $widthSite: 736px;
+}
+
+@media(max-width:425px){
+  $widthSite: 344px;
+}
